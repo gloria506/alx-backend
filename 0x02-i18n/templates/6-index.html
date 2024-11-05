@@ -9,9 +9,15 @@
 <body>
     <h1>{{ _('home_header') }}</h1>
     {% if g.user %}
+<<<<<<< HEAD
         <p>{{ _('logged_in_as', username=g.user.name) }}</p>
     {% else %}
         <p>{{ _('not_logged_in') }}</p>
+=======
+    <p>{{ _('logged_in_as', username=g.user.get('name', '')) }}</p>
+    {% else %}
+    <p>{{ _('not_logged_in') }}</p>
+>>>>>>> 87993d5e35a2385b0b11eb172faf9ee70c2087a7
     {% endif %}
 </body>
 </html>
